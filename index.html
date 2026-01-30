@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+      COMP1002 - Assignment 1
+      This is my resume as a single HTML page.
+      I used semantic tags (header/main/section/article/footer) and kept the CSS simple.
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nelson Obita - Resume</title>
+    <meta name="description" content="Resume for Nelson Obita (Computer Programming student).">
+
+    <!-- Small amount of CSS just to make it easier to read -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1.25rem;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+            .skip-link:focus {
+                left: 1rem;
+                top: 1rem;
+                width: auto;
+                height: auto;
+                background: #fff;
+                padding: 0.5rem;
+                border: 2px solid #000;
+            }
+
+        header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        section {
+            margin: 1.25rem 0;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem;
+        }
+
+        h2 {
+            margin: 0 0 0.5rem;
+        }
+
+        article {
+            padding: 0.75rem;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            margin: 0.75rem 0;
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip link so keyboard users can jump to the main part -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Top part of the page (name + contact + nav). id="top" is for the back to top link -->
+    <header id="top" class="container">
+        <h1>Nelson Obita</h1>
+        <p>Computer Programming Student | Barrie, ON</p>
+
+        <!-- Using address tag because this is contact info -->
+        <address>
+            <p>
+                Email:
+                <a href="mailto:nelsonobita@gmail.com">nelsonobita@gmail.com</a>
+                <br>
+                Phone:
+                <a href="tel:+12267020199">+1 (226) 702-0199</a>
+                <br>
+                GitHub:
+                <a href="https://github.com/nelsonobita">github.com/nelsonobita</a>
+                <br>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/nelsonobita">linkedin.com/in/nelsonobita</a>
+            </p>
+        </address>
+
+        <!-- Nav links go to sections on this same page -->
+        <nav aria-label="Resume sections">
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of the resume -->
+    <main id="main-content" class="container">
+
+        <!-- Quick intro about me -->
+        <section id="summary" aria-labelledby="summary-heading">
+            <h2 id="summary-heading">Professional Summary</h2>
+            <p>
+                Entry-level developer and Computer Programming student focused on clean, readable code
+                and strong communication. Comfortable with HTML5 semantics, Git/GitHub workflows, and
+                building small projects with clear documentation.
+            </p>
+        </section>
+
+        <!-- Skills list -->
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical Skills</h2>
+            <ul>
+                <li><strong>Web:</strong> HTML5 (semantic), basic CSS, accessibility fundamentals</li>
+                <li><strong>Programming:</strong> C# fundamentals, basic problem solving</li>
+                <li><strong>Tools:</strong> Git, GitHub, Visual Studio / VS Code</li>
+                <li><strong>Other:</strong> Clear written communication, troubleshooting, teamwork</li>
+            </ul>
+        </section>
+
+        <!-- Projects I worked on. Each one is in an article -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+
+            <article aria-labelledby="project1-title">
+                <h3 id="project1-title">Arduino RGB LED Patterns</h3>
+                <p>
+                    Built an Arduino sketch to cycle RGB LED colors with configurable timing variables.
+                    Focused on readable naming and step-by-step logic.
+                </p>
+                <ul>
+                    <li>Used PWM pins and timing delays to create repeatable patterns</li>
+                    <li>Kept code organized with functions for each “cycle”</li>
+                </ul>
+            </article>
+
+            <article aria-labelledby="project2-title">
+                <h3 id="project2-title">Weather Report (C# Fundamentals)</h3>
+                <p>
+                    Created a small C# console app that formats weather data using string interpolation.
+                </p>
+                <ul>
+                    <li>Practiced variables, formatting, and clean output</li>
+                    <li>Maintained consistent naming and readable structure</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Work experience -->
+        <section id="experience" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Experience</h2>
+
+            <article aria-labelledby="job1-title">
+                <h3 id="job1-title">Customer Support / Technical Support (Part-time)</h3>
+                <p>
+                    <strong>NorthStar Support Services</strong> — Barrie, ON |
+                    <time datetime="2024-01">Jan 2024</time> – <time datetime="2026-01">Present</time>
+                </p>
+                <ul>
+                    <li>Resolved customer issues through ticket-based support and clear written instructions</li>
+                    <li>Troubleshot account, policy, and basic technical problems with strong attention to detail</li>
+                    <li>Documented steps and outcomes to improve future resolution speed</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- School info -->
+        <section id="education" aria-labelledby="education-heading">
+            <h2 id="education-heading">Education</h2>
+
+            <article aria-labelledby="edu1-title">
+                <h3 id="edu1-title">Ontario College Diploma — Computer Programming</h3>
+                <p>
+                    <strong>Georgian College</strong> — Barrie, ON |
+                    <time datetime="2026-01">Winter 2026</time> – <time datetime="2027-12">Expected 2027</time>
+                </p>
+                <ul>
+                    <li>Coursework: Web fundamentals, programming fundamentals, problem solving</li>
+                    <li>Tools: Git/GitHub, VS Code / Visual Studio</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Extra stuff (optional) -->
+        <section id="certifications" aria-labelledby="certs-heading">
+            <h2 id="certs-heading">Certifications</h2>
+            <ul>
+                <li>WHMIS (in progress) / First Aid (optional) / Google Fundamentals (optional)</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Bottom of the page -->
+    <footer class="container">
+        <p>
+            Last updated:
+            <time datetime="2026-01-29">Jan 29, 2026</time>
+        </p>
+        <p>
+            <a href="#top">Back to top</a>
+        </p>
+    </footer>
+</body>
+</html>
